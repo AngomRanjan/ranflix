@@ -5,7 +5,6 @@ import Nav from './Nav';
 const HomeScreen = () => (
   <div className="homeScreen">
     <Nav />
-
     {/* Banner */}
     {/* Rows */}
   </div>
