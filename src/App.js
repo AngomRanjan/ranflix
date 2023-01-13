@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
+import HomeScreen from './components/HomeScreen';
 
 function App() {
   return (
     <div className="app">
-      <h1>Ranflix</h1>
+      <HomeScreen />
     </div>
   );
 }
