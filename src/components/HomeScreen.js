@@ -1,10 +1,12 @@
 import React from 'react';
 import '../css/HomeScreen.css';
+import Banner from './Banner';
 import Nav from './Nav';
 
 const HomeScreen = () => (
   <div className="homeScreen">
     <Nav />
+    <Banner />
     {/* Banner */}
     {/* Rows */}
   </div>
