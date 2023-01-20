@@ -5,18 +5,24 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
-import HomeScreen from './components/HomeScreen';
+import Home from './components/Home';
+import Login from './components/Login';
 
-function App() {
+const App = () => {
+  const user = 'null';
   return (
     <div className="app">
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<HomeScreen />} />
-        </Routes>
+        {!user ? (
+          <Login />
+        ) : (
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+        )}
       </BrowserRouter>
     </div>
   );
-}
+};
 
 export default App;
