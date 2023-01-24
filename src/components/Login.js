@@ -1,5 +1,6 @@
 import React from 'react';
 import '../css/Login.css';
+import logo from '../asset/ranflix.png';
 
 const Login = () => {
   const testTxt = 'Login';
@@ -8,15 +9,10 @@ const Login = () => {
       <div className="login__background">
         <img
           className="login__logo"
-          src="../asset/ranflix.png"
+          src={logo}
           alt=""
         />
       </div>
-      <img
-        className="login__logo"
-        src="../asset/ranflix.png"
-        alt=""
-      />
       {testTxt}
     </div>
   );
