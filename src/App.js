@@ -9,7 +9,7 @@ import Home from './components/Home';
 import Login from './components/Login';
 
 const App = () => {
-  const user = null;
+  const user = 'null';
   return (
     <div className="app">
       <BrowserRouter>
