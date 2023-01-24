@@ -18,8 +18,6 @@ const Banner = () => {
     fetchData();
   }, []);
 
-  console.log(movie);
-
   const truncate = (text, len) => {
     const retText = text?.length > len ? `${text.substr(0, len - 1)} ...` : text;
     return retText;

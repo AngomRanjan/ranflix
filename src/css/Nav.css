@@ -15,7 +15,7 @@
 }
 
 .nav__black {
-  background-color: #000;
+  background-color: #000000ee;
 }
 
 .nav__logo {
@@ -25,7 +25,6 @@
   object-fit: contain;
   padding-left: 20px;
   cursor: pointer;
-  background-color: gray;
 }
 
 .nav__avatar {

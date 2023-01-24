@@ -1,15 +1,15 @@
 import React from 'react';
 import requests from '../api/Request';
-import '../css/HomeScreen.css';
+import '../css/Home.css';
 import Banner from './Banner';
 import Nav from './Nav';
 import Row from './Row';
 
-const HomeScreen = () => (
-  <div className="homeScreen">
+const Home = () => (
+  <div className="home">
     <Nav />
     <Banner />
-    <Row title="NETFLIX ORIGINALS" fetchUrl={requests.fetchNetflixOriginals} isLargeRow />
+    <Row title="Ranflix Originals" fetchUrl={requests.fetchNetflixOriginals} isLargeRow />
     <Row title="Trending Now" fetchUrl={requests.fetchTrending} />
     <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
     <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
@@ -20,4 +20,4 @@ const HomeScreen = () => (
   </div>
 );
 
-export default HomeScreen;
+export default Home;
