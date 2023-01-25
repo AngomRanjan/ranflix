@@ -1,1 +1,12 @@
 /* Login Style */
+
+.login {
+  position: relative;
+  height: 100%;
+}
+
+.login__logo {
+  position: fixed;
+  left: 0;
+  width: 150px;
+}

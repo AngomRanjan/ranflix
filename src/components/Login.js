@@ -10,10 +10,9 @@ const Login = () => {
         <img
           className="login__logo"
           src={logo}
-          alt=""
+          alt={testTxt}
         />
       </div>
-      {testTxt}
     </div>
   );
 };
