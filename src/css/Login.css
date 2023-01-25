@@ -45,8 +45,7 @@
 
 .login__body {
   position: absolute;
-
-  /* width: 90%; */
+  width: 95%;
   top: 30%;
   margin: 0 auto;
   text-align: center;
