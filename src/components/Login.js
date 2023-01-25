@@ -12,6 +12,8 @@ const Login = () => {
           src={logo}
           alt={testTxt}
         />
+        <button type="button" className="login__button">Sign In</button>
+        <div className="login__gradient" />
       </div>
     </div>
   );
