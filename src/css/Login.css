@@ -45,8 +45,9 @@
 
 .login__body {
   position: absolute;
-  width: 95%;
   top: 30%;
+  left: 0;
+  right: 0;
   margin: 0 auto;
   text-align: center;
   z-index: 1;
@@ -91,10 +92,4 @@
   background-color: #e50914;
   font-weight: 600;
   cursor: pointer;
-}
-
-.login__input > form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
