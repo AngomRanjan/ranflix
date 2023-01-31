@@ -1,18 +1,41 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import '../css/SignIn.css';
+import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+
+/* eslint-disable jsx-a11y/no-static-element-interactions, jsx-a11y/click-events-have-key-events */
 
 const SignIn = () => {
-  const testVar = 'SignIn';
+  const emailRef = useRef(null);
+  const passwordRef = useRef(null);
+  const register = (e) => {
+    e.preventDefault();
+    const auth = getAuth();
+    createUserWithEmailAndPassword(
+      auth,
+      emailRef.current.value,
+      passwordRef.current.value,
+    )
+      .then((authUser) => {
+        console.log(authUser);
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+  };
+
+  const signIn = (e) => {
+    e.preventDefault();
+  };
   return (
-    <div id={testVar} className="signIn">
+    <div className="signIn">
       <form>
         <h1>Sign In</h1>
-        <input type="email" placeholder="Email" />
-        <input type="password" placeholder="password" />
-        <button type="submit">Sign In</button>
+        <input type="email" placeholder="Email" ref={emailRef} />
+        <input type="password" placeholder="password" ref={passwordRef} />
+        <button type="submit" onClick={signIn}>Sign In</button>
         <h4>
           <span className="signIn__gray">New to Ranflix? </span>
-          Sign Up now.
+          <span className="signIn__link" onClick={register}>Sign Up now.</span>
         </h4>
       </form>
     </div>

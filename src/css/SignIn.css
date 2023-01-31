@@ -8,7 +8,6 @@
 
 .signIn > form {
   display: grid;
-  /* flex-direction: column; */
 }
 
 .signIn > form > input {
@@ -45,4 +44,9 @@
 
 .signIn__gray {
   color: #808080;
+}
+
+.signIn__link:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
