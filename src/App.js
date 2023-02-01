@@ -1,23 +1,31 @@
 import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import './App.css';
 import {
   BrowserRouter,
   Routes,
   Route,
 } from 'react-router-dom';
+import { login, logout, selectUser } from './features/userSlice';
 import { auth } from './firebase';
 import Home from './components/Home';
 import Login from './components/Login';
 
 const App = () => {
-  const user = null;
+  const user = useSelector(selectUser);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    const cleanUp = auth.onAuthStateChanged((isLogin) => {
-      if (isLogin) {
-        console.log(isLogin);
+    const cleanUp = auth.onAuthStateChanged((userAuth) => {
+      if (userAuth) {
+        console.log(userAuth);
+        dispatch(login({
+          uid: userAuth.uid,
+          email: userAuth.email,
+        }));
       } else {
         //
+        dispatch(logout);
       }
     });
     return cleanUp;
