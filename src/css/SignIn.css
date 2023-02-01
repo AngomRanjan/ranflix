@@ -3,6 +3,7 @@
   max-width: 300px;
   padding: 70px;
   margin: 0 auto;
+  margin-top: -70px;
   background: rgba(0, 0, 0, 0.85);
 }
 

@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import '../css/SignIn.css';
-import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../firebase';
 
 /* eslint-disable jsx-a11y/no-static-element-interactions, jsx-a11y/click-events-have-key-events */
 
@@ -9,7 +10,6 @@ const SignIn = () => {
   const passwordRef = useRef(null);
   const register = (e) => {
     e.preventDefault();
-    const auth = getAuth();
     createUserWithEmailAndPassword(
       auth,
       emailRef.current.value,
@@ -25,6 +25,17 @@ const SignIn = () => {
 
   const signIn = (e) => {
     e.preventDefault();
+    signInWithEmailAndPassword(
+      auth,
+      emailRef.current.value,
+      passwordRef.current.value,
+    )
+      .then((authUser) => {
+        console.log(authUser);
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
   };
   return (
     <div className="signIn">
