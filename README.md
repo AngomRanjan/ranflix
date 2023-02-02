@@ -19,7 +19,7 @@ In the project directory, you can run:
 
 ## Prerequisites
 
-- Good knowledge on javascript objects
+- Knowledge on HTML, CSS and javascript objects
 - VSCode or other text editor installed. [Link to download VSCode](https://code.visualstudio.com/download)
 - Node package. [Link to download node](https://nodejs.org/en/download/)
 
