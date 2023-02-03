@@ -10,6 +10,7 @@ import { login, logout, selectUser } from './features/userSlice';
 import { auth } from './firebase';
 import Home from './components/Home';
 import Login from './components/Login';
+import Profile from './components/Profile';
 
 const App = () => {
   const user = useSelector(selectUser);
@@ -37,6 +38,7 @@ const App = () => {
           <Login />
         ) : (
           <Routes>
+            <Route path="/profile" element={<Profile />} />
             <Route path="/" element={<Home />} />
           </Routes>
         )}
