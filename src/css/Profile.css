@@ -1,1 +1,11 @@
 /* pro stlye */
+
+.profile__info {
+  background-color: white;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.profile__info > img {
+  width: 200px;
+}

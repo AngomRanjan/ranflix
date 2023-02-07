@@ -24,8 +24,8 @@ const Nav = () => {
   return (
     <div className={`nav ${show && 'nav__black'}`}>
       <div className="nav__contents">
-        <img className="nav__logo" src={logo} alt="flogo" />
-        <img onClick={() => navigate('/profile')} className="nav__avatar" src={logo} alt="avatar" />
+        <img onClick={() => navigate('/')} className="nav__logo" src={logo} alt="flogo" />
+        <img onClick={() => navigate('/profile')} className="nav__avatar" src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png?20201013161117" alt="avatar" />
       </div>
     </div>
   );

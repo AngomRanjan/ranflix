@@ -10,6 +10,7 @@
           "apply",
           "variants",
           "responsive",
+          "property",
           "screen"
         ]
       }
@@ -22,6 +23,7 @@
           "apply",
           "variants",
           "responsive",
+          "property",
           "screen"
         ]
       }

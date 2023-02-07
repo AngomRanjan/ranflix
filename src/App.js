@@ -25,12 +25,11 @@ const App = () => {
           email: userAuth.email,
         }));
       } else {
-        //
-        dispatch(logout);
+        dispatch(logout());
       }
     });
     return cleanUp;
-  }, []);
+  }, [dispatch]);
   return (
     <div className="app">
       <BrowserRouter>
